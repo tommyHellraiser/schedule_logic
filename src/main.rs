@@ -130,4 +130,113 @@ mod mix_test {
 
         assert_eq!(mix, expected_mix)
     }
+
+    #[test]
+    fn test_4() {
+        let product = "Cocaine";
+        let substances = vec![
+            "Gasoline",
+            "Cuke",
+            "Addy",
+            "Battery",
+            "Iodine",
+            "Horse Semen",
+            "Mega Bean",
+            "Motor Oil",
+            "Cuke",
+            "Cuke",
+        ];
+        let mix = Mix::new_mix(product, substances.clone()).unwrap();
+
+        let expected_mix = Mix::new_instance(
+            "Cocaine",
+            substances,
+            vec![
+                Effect::Zombifying,
+                Effect::Cyclopean,
+                Effect::Electrifying,
+                Effect::BrightEyed,
+                Effect::AntiGravity,
+                Effect::LongFaced,
+                Effect::Laxative,
+                Effect::Athletic,
+            ],
+            58.0,
+            663.0
+        ).unwrap();
+
+        assert_eq!(mix, expected_mix)
+    }
+
+    #[test]
+    fn test_5() {
+        let product = "Cocaine";
+        let substances = vec![
+            "Donut",
+            "Viagra",
+            "Mouth Wash",
+            "Cuke",
+            "Energy Drink",
+            "Banana",
+            "Chili",
+            "Battery",
+            "Donut",
+        ];
+        let mix = Mix::new_mix(product, substances.clone()).unwrap();
+
+        let expected_mix = Mix::new_instance(
+            "Cocaine",
+            substances,
+            vec![
+                Effect::Jennerising,
+                Effect::BrightEyed,
+                Effect::Sneaky,
+                Effect::ThoughtProvoking,
+                Effect::Zombifying,
+                Effect::Gingeritis,
+                Effect::Spicy,
+                Effect::CalorieDense
+            ],
+            39.0,
+            591.0
+        ).unwrap();
+
+        assert_eq!(mix, expected_mix)
+    }
+
+    #[test]
+    fn test_6() {
+        let product = "Meth";
+        let substances = vec![
+            "Banana",
+            "Cuke",
+            "Paracetamol",
+            "Gasoline",
+            "Cuke",
+            "Battery",
+            "Chili",
+            "Horse Semen",
+            "Mega Bean",
+        ];
+        let mix = Mix::new_mix(product, substances.clone()).unwrap();
+
+        let expected_mix = Mix::new_instance(
+            "Meth",
+            substances,
+            vec![
+                Effect::Electrifying,
+                Effect::Glowing,
+                Effect::TropicThunder,
+                Effect::Zombifying,
+                Effect::Cyclopean,
+                Effect::BrightEyed,
+                Effect::Spicy,
+                Effect::LongFaced
+            ],
+            45.0,
+            342.0
+        ).unwrap();
+
+        assert_eq!(mix, expected_mix)
+    }
 }

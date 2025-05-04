@@ -118,7 +118,7 @@ impl Substance {
             "Motor Oil" => Ok(Self::MotorOil(MotorOil::new())),
             "Mouth Wash" => Ok(Self::MouthWash(MouthWash::new())),
             "Paracetamol" => Ok(Self::Paracetamol(Paracetamol::new())),
-            "Viagor" => Ok(Self::Viagor(Viagor::new())),
+            "Viagra" => Ok(Self::Viagor(Viagor::new())),
             value => Err(format!("Unknown substance: {}", value))
         }
     }
